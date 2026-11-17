@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BitterSweet Coffee | Coffee, Cakes, and Moments to Remember</title>
+<meta name="description" content="Handcrafted coffee and dessert catering for weddings, corporate events, birthdays and holidays in Ontario.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=EB+Garamond:ital@0;1&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/luc6iyj.css">
+<style>
+:root{
+  --cream:#f9f4e8; --brown-dark:#622f12; --brown:#8b5845; --peach:#f7d8b0;
+  --sage:#858572; --sage-light:#c9ccba;
+  --head:"Ivy Mode","ivymode","Cormorant Garamond",Georgia,serif; --body:"Avenir","Avenir Next","Avenir Light","Jost",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-weight:300;font-size:15px;line-height:1.7;background:var(--cream);color:var(--brown-dark)}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--head);font-weight:400;line-height:1.15}
+h2{font-size:2.6rem;text-align:center}
+.awning{height:clamp(36px,3.35vw,67px);background:url("https://static.wixstatic.com/media/1d177c_376bf42abde444ddbcbfca6ccdc63d9b~mv2.jpg") center/auto 100% repeat-x}
+
+/* header */
+header{background:var(--cream);height:62px;display:flex;align-items:center;padding:0 34px;position:sticky;top:0;z-index:20}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-family:var(--head);font-size:1.25rem}
+.logo img{height:30px;width:auto}
+
+/* hero */
+.hero{background:var(--brown-dark);color:var(--cream);text-align:center;padding:clamp(28px,2vw,40px) 20px clamp(48px,6vw,120px)}
+.hero p{font-size:clamp(14px,1.2vw,24px);line-height:1.3;margin-bottom:clamp(8px,.8vw,16px)}
+.hero h1{font-size:clamp(2.6rem,5.2vw,6.5rem);line-height:1;max-width:60vw;margin:0 auto;letter-spacing:-.02em}
+.awning.flip{transform:scaleY(-1)}
+
+/* story */
+.story{display:grid;grid-template-columns:1fr 1fr;min-height:clamp(320px,32vw,640px)}
+.story img{width:100%;height:100%;object-fit:cover}
+.story .text{display:flex;flex-direction:column;justify-content:center;padding:40px 4vw 40px 3.75vw}
+.story h2{text-align:left;font-size:clamp(1.8rem,2.3vw,3rem);margin-bottom:clamp(14px,1.8vw,36px)}
+.story p{font-size:clamp(14px,.9vw,18px);line-height:1.6;margin-bottom:1.2em;max-width:31vw}
+
+/* marquee */
+.marquee{background:var(--brown);overflow:hidden;height:clamp(64px,4.75vw,95px);display:flex;align-items:center}
+.track{--s:max(.058vw,.7px);display:flex;align-items:center;gap:clamp(24px,2.6vw,52px);width:max-content;animation:scroll 40s linear infinite}
+.track img{height:auto;flex:none}
+.track img:nth-child(6n+1){width:calc(var(--s)*147)}
+.track img:nth-child(6n+2){width:calc(var(--s)*36)}
+.track img:nth-child(6n+3){width:calc(var(--s)*117)}
+.track img:nth-child(6n+4){width:calc(var(--s)*44)}
+.track img:nth-child(6n+5){width:calc(var(--s)*81)}
+.track img:nth-child(6n){width:calc(var(--s)*31)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* services */
+.services{background:var(--sage);color:var(--cream);padding:clamp(48px,5vw,100px) 20px clamp(48px,4.5vw,90px);text-align:center}
+.services h2{font-size:clamp(2.2rem,3.4vw,4.25rem);margin-bottom:clamp(36px,7vw,140px)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0;max-width:91vw;margin:0 auto}
+.cards img{height:clamp(110px,10vw,200px);width:auto;margin:0 auto clamp(18px,2vw,40px);object-fit:contain}
+.cards h3{font-size:clamp(1.4rem,1.9vw,2.4rem);margin-bottom:clamp(8px,1vw,20px)}
+.cards p{font-size:clamp(14px,1vw,20px);line-height:1.72;max-width:19vw;min-width:240px;margin:0 auto}
+
+/* packages */
+.wave{height:50px;background:url("https://static.wixstatic.com/media/1d177c_0563ac690547488a8bab0920435a7534~mv2.png") center/auto 50px repeat-x}
+.packages{padding:clamp(28px,2.5vw,50px) 20px clamp(60px,5vw,100px)}
+.packages h2{font-size:clamp(2.2rem,3.4vw,4.25rem);margin-bottom:clamp(40px,6.1vw,122px)}
+.pkg{width:clamp(min(92vw,520px),56.65vw,1133px);margin:0 auto clamp(40px,4.7vw,94px);position:relative}
+.pkg .tab{position:relative;z-index:2;display:flex;align-items:center;height:clamp(46px,3.8vw,76px);margin-left:clamp(60px,4.35vw,87px);width:max-content}
+.pkg .tab img{position:absolute;top:-47%;left:calc(clamp(6px,.5vw,10px) - clamp(60px,4.35vw,87px));height:clamp(70px,6.5vw,130px);width:auto}
+.pkg .tab h3{background:var(--peach);height:100%;display:flex;align-items:center;padding:0 clamp(28px,3vw,60px) 0 clamp(16px,1.75vw,35px);font-size:clamp(1.15rem,1.9vw,2.4rem);border-radius:clamp(8px,.6vw,12px);white-space:nowrap}
+.pkg .card{background:var(--brown);color:var(--cream);padding:clamp(34px,4.1vw,82px) clamp(18px,4vw,80px) clamp(24px,2.5vw,50px) 0;margin-top:clamp(-35px,-1.75vw,-24px);font-size:clamp(13px,1vw,20px);line-height:1.45}
+.pkg .card ul{margin-left:clamp(26px,4.8vw,96px)}
+.pkg .card p{margin-left:clamp(10px,4.15vw,83px)}
+
+/* testimonial */
+.testimonial{background:var(--sage-light);padding:clamp(28px,2.75vw,55px) 20px clamp(24px,1.45vw,29px);position:relative}
+.testimonial h2{font-family:"EB Garamond",Georgia,serif;font-size:clamp(2rem,3.1vw,3.9rem);margin-bottom:clamp(28px,3.3vw,66px)}
+.quote{width:fit-content;max-width:100%;margin:0 auto;display:none;align-items:flex-start}
+.quote.on{display:flex;animation:fade .5s}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.quote.rev .box{margin:clamp(70px,10.4vw,208px) clamp(-87px,-4.35vw,-30px) 0 0;position:relative;z-index:1}
+.quote .ph{background:var(--cream)}
+.quote img{width:clamp(180px,22.8vw,456px);aspect-ratio:394/552;object-fit:cover;border-radius:999px 999px 0 0;flex:none}
+.quote .box{background:var(--cream);width:clamp(260px,32.25vw,645px);margin:clamp(70px,7.25vw,145px) 0 0 clamp(-92px,-4.6vw,-30px);padding:clamp(24px,3vw,60px) clamp(20px,2.4vw,48px)}
+.quote blockquote{font-family:"EB Garamond",Georgia,serif;font-size:clamp(1.1rem,1.45vw,1.8rem);line-height:1.45}
+.quote hr{width:clamp(28px,2.2vw,44px);border:0;border-top:1px solid var(--brown-dark);margin:clamp(14px,1.6vw,34px) 0 clamp(14px,1.9vw,38px)}
+.quote cite{font-style:normal;font-size:clamp(13px,.95vw,19px)}
+.t-arrow{position:absolute;top:54%;width:clamp(36px,3.1vw,62px);color:var(--brown-dark);background:none;border:0;padding:0;cursor:pointer}
+.t-arrow svg{display:block;width:100%;height:auto}
+.t-arrow.l{left:1.4vw}.t-arrow.r{right:1.4vw}
+.dots{display:flex;gap:17px;justify-content:center;margin-top:clamp(24px,2.25vw,45px)}
+.dots button{width:10px;height:10px;border-radius:50%;background:var(--brown-dark);border:1.5px solid var(--brown-dark);padding:0;cursor:pointer;transform:scale(.8)}
+.dots button.on{background:none;transform:none}
+
+/* gallery */
+.gallery-sec{background:var(--brown);color:var(--cream);padding:clamp(28px,2.75vw,55px) 20px clamp(36px,2.5vw,50px)}
+.gallery-sec h2{font-family:"EB Garamond",Georgia,serif;font-size:clamp(2rem,3.1vw,3.9rem);margin-bottom:clamp(24px,3vw,60px)}
+.slider{--w:clamp(min(92vw,520px),56.7vw,1134px);width:var(--w);margin:0 auto;position:relative}
+.rail{display:flex;gap:clamp(8px,.9vw,18px);overflow-x:auto;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail img{flex:none;height:calc(var(--w)*.671);aspect-ratio:3/4;object-fit:cover}
+.slider button{position:absolute;top:50%;margin-top:calc(clamp(34px,2.3vw,46px)/-2);width:clamp(34px,2.3vw,46px);height:clamp(34px,2.3vw,46px);border-radius:50%;border:0;background:rgba(250,244,232,.92);color:var(--brown-dark);cursor:pointer;z-index:2;display:grid;place-items:center;padding:0}
+.slider button svg{width:30%;height:auto}
+.slider .prev{left:clamp(10px,1.3vw,26px)}.slider .next{right:clamp(10px,1.3vw,26px)}
+.cap{width:var(--w,clamp(min(92vw,520px),56.7vw,1134px));margin:clamp(10px,.9vw,18px) auto 0;font-size:clamp(14px,1vw,20px)}
+
+/* booking */
+.book{padding:clamp(40px,5.2vw,105px) 13.85vw clamp(48px,8.7vw,174px) 3.8vw;display:grid;grid-template-columns:1fr 25.5vw;gap:40px;align-items:start}
+.book h2{font-family:"EB Garamond",Georgia,serif;text-align:left;font-size:clamp(2.6rem,4.5vw,5.6rem);line-height:1.1;margin-top:clamp(0px,.5vw,10px)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,1.4vw,28px);padding-top:clamp(0px,1vw,20px)}
+.full{grid-column:1/-1}
+label{font-size:clamp(14px,1vw,20px);line-height:1.3;display:block}
+input,textarea{display:block;width:100%;height:clamp(38px,2.6vw,52px);border:0;border-bottom:1px solid var(--brown-dark);background:transparent;padding:0;font:inherit;font-size:clamp(14px,1vw,20px);color:var(--brown-dark);border-radius:0}
+input:focus,textarea:focus{outline:0;border-bottom-width:2px}
+textarea{height:clamp(80px,5.75vw,115px);resize:vertical}
+.btn{background:var(--brown-dark);color:var(--cream);border:0;border-radius:999px;width:clamp(110px,7.6vw,152px);height:clamp(38px,2.45vw,49px);font:inherit;font-size:clamp(14px,1vw,20px);cursor:pointer}
+.btn:hover{background:var(--brown)}
+
+/* footer */
+footer{background:var(--brown-dark);color:var(--cream);display:grid;gap:28px;padding:40px 20px;text-align:center;font-size:15px;line-height:1.43}
+footer h3{font-size:clamp(1.25rem,1.5vw,1.9rem);line-height:1.2}
+footer .col2 img{height:clamp(70px,6vw,119px);width:auto;margin:clamp(12px,1.75vw,35px) auto clamp(24px,4.4vw,88px)}
+footer .col2 h3{font-size:clamp(1.25rem,1.5vw,1.9rem)}
+footer .contact{margin-top:clamp(20px,2.5vw,50px)}
+footer .col2 p{font-size:clamp(13px,.87vw,17.5px)}
+.social{display:flex;gap:clamp(14px,1.65vw,33px);justify-content:center;align-items:center;margin-top:clamp(8px,.7vw,14px)}
+.social img{filter:brightness(0) invert(1) sepia(.2)}
+.social a:first-child img{width:clamp(40px,3.15vw,63px);height:auto}
+.social a:last-child img{width:clamp(20px,1.45vw,29px);height:auto}
+footer .col1 p,footer .col3{font-size:clamp(14px,.97vw,19.5px)}
+@media(min-width:761px){
+  footer{display:block;position:relative;height:18.85vw;padding:0;text-align:left}
+  footer .col1{position:absolute;left:9.2vw;top:4.15vw}
+  footer .col2{position:absolute;left:48.85vw;top:2.75vw;transform:translateX(-50%);text-align:center;white-space:nowrap}
+  footer .col3{position:absolute;left:82vw;top:4.15vw;transform:translateX(-50%);text-align:center}
+}
+
+@media(max-width:760px){
+  .story,.book{grid-template-columns:1fr}
+  .story img{height:300px}
+  .story p,.hero h1{max-width:none}
+  .story .text{padding:32px 20px}
+  .cards{grid-template-columns:1fr;gap:40px;max-width:none}
+  .quote{flex-direction:column}
+  .quote{width:100%;align-items:center}
+  .quote .box{margin:-20px 0 0;width:100%}
+  .quote.rev{flex-direction:column-reverse}
+  .quote.rev .box{margin:-20px 0 0}
+  .t-arrow{display:none}
+  .book{padding:48px 20px 56px}
+  .book h2{text-align:center}
+  form{width:100%;padding-top:0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#top"><img alt="" src="https://static.wixstatic.com/media/1d177c_f2d631c3d1a44bcbbbe55303c6908558~mv2.png/v1/fit/w_72,h_162,q_90/icon.png">BitterSweet</a>
+</header>
+
+<main id="top">
+  <div class="awning"></div>
+  <section class="hero">
+    <p>Brew, Bake, and Celebrate</p>
+    <h1>Coffee, Cakes, and Moments to Remember</h1>
+  </section>
+  <div class="awning flip"></div>
+
+  <section class="story">
+    <img alt="Barista pouring latte art" src="https://static.wixstatic.com/media/1d177c_74700d68d3fd47a98f9ad24aa15a7ed3~mv2.jpg/v1/fill/w_976,h_514,al_c,q_80/coffee.jpg">
+    <div class="text">
+      <h2>Our Story</h2>
+      <p>Why settle for another plain latte or supermarket cake? Bittersweet brings something different. We’re a handcrafted coffee and dessert catering company led by a barista who loves creating unforgettable moments. Favorites like our Donut Coffee and Crispy Chocolate Fruit Tart always win hearts.</p>
+      <p>From weddings and corporate events to birthdays and holiday gatherings, we’ve done it all with warmth and charm. We use only the finest beans, design desserts that feel special, and tailor every package to your occasion.</p>
+      <p>Our mission is simple: to elevate your event with coffee and desserts that connect people, spark joy, and leave lasting memories.</p>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="track" id="track"></div>
+  </div>
+
+  <section class="services">
+    <h2>Catering Services</h2>
+    <div class="cards">
+      <div>
+        <img alt="" src="https://static.wixstatic.com/media/1d177c_993ea4b4740d4868afd088648efc8117~mv2.png/v1/fill/w_274,h_386,al_c,q_85/espresso.png">
+        <h3>Espresso Bar</h3>
+        <p>We bring the café to you with a full espresso bar—signature lattes, iced favorites, and latte art that delights every guest.</p>
+      </div>
+      <div>
+        <img alt="" src="https://static.wixstatic.com/media/1d177c_b3daa359a6e54960a81b6800d2db283c~mv2.png/v1/fill/w_420,h_376,al_c,q_85/dessert.png">
+        <h3>Desserts</h3>
+        <p>Handcrafted treats that pair perfectly with our coffee. From cookies to cakes, each bite is designed to make your event unforgettable.</p>
+      </div>
+      <div>
+        <img alt="" src="https://static.wixstatic.com/media/1d177c_0c70afd7c7494548bb78b4d887007536~mv2.png/v1/fill/w_490,h_490,al_c,q_85/personal.png">
+        <h3>Personalization</h3>
+        <p>Your story, your brand, your event—personalized. With custom cup stickers, branded latte art, and décor tailored to you, your coffee bar becomes uniquely yours.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave" style="background-color:var(--sage)"></div>
+  <section class="packages">
+    <h2>Packages</h2>
+
+    <div class="pkg">
+      <div class="tab"><img alt="" src="https://static.wixstatic.com/media/1d177c_40e378f396854eb0a67823306a5d601a~mv2.png/v1/fill/w_225,h_147,al_c,q_85/latte.png"><h3>Classic Package</h3></div>
+      <div class="card"><ul>
+        <li>2 hours of service (with extension options)</li>
+        <li>Professional barista set-up with stylish décor to complement your event</li>
+        <li>Handcrafted drinks: Americano, Signature Latte, Donut Coffee, Iced Coconut Latte, Iced Caramel Latte, Iced Blueberry Sparkling Water</li>
+        <li>Beautiful latte art using premium Arabica beans</li>
+      </ul></div>
+    </div>
+
+    <div class="pkg">
+      <div class="tab"><img alt="" src="https://static.wixstatic.com/media/1d177c_07c4796071e940cba000eb480eabf5c1~mv2.png/v1/fill/w_219,h_147,al_c,q_85/latte.png"><h3>Premium Package</h3></div>
+      <div class="card">
+        <p>Everything from the Classic, plus:</p>
+        <ul>
+          <li>Expanded drink options: Mocaccinos, Affogatos, Hand-Shaken Lemon Tea</li>
+          <li>Freshly baked, handmade cookies</li>
+          <li>A richer sensory experience ideal for weddings, larger celebrations, and corporate gatherings</li>
+          <li>Personalized latte art and custom cup stickers (featuring names, portraits, or branding)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pkg" style="margin-bottom:0">
+      <div class="tab"><img alt="" src="https://static.wixstatic.com/media/1d177c_1defe9cc988b4e9ba43a058f56cd7bc3~mv2.png/v1/fill/w_219,h_132,al_c,q_85/latte.png"><h3>Custom Experience</h3></div>
+      <div class="card">
+        <p>A fully bespoke coffee bar, tailored to your event’s vision:</p>
+        <ul>
+          <li>Signature drinks crafted just for you</li>
+          <li>A setup that becomes a memorable centerpiece and enhances guest engagement</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonial">
+    <h2>Our Clients Say</h2>
+    <div class="quote on">
+      <img alt="Wedding reception" src="https://static.wixstatic.com/media/1d177c_e4c1fe48a8b547e8b5015d81dbae12c9~mv2.jpg/v1/crop/x_476,y_0,w_1096,h_1536/fill/w_394,h_552,al_c,q_80/IMG_6738.jpg">
+      <div class="box">
+        <blockquote>“Your Donut Coffee was the highlight of our wedding reception!!”</blockquote>
+        <hr>
+        <cite>Sisi &amp; Don, October 2024</cite>
+      </div>
+    </div>
+    <div class="quote rev">
+      <div class="box">
+        <blockquote>“Best corporate event decision we made—everyone loved it.”</blockquote>
+        <hr>
+        <cite>Ava - Rakuten, April 2025</cite>
+      </div>
+      <!-- Save the buffet photo next to index.html as rakuten-event.jpg -->
+      <img alt="Corporate event buffet" src="rakuten-event.jpg">
+    </div>
+    <button class="t-arrow l" aria-label="Previous testimonial"><svg viewBox="0 0 62 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M61 9H1M9 1L1 9l8 8"/></svg></button>
+    <button class="t-arrow r" aria-label="Next testimonial"><svg viewBox="0 0 62 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 9h60M53 1l8 8-8 8"/></svg></button>
+    <div class="dots"><button class="on" aria-label="Testimonial 1"></button><button aria-label="Testimonial 2"></button></div>
+  </section>
+
+  <section class="gallery-sec">
+    <h2>Image Gallery</h2>
+    <div class="slider">
+      <button class="prev" aria-label="Previous"><svg viewBox="0 0 8 14" fill="none" stroke="currentColor" stroke-width="1"><path d="M7 1L1 7l6 6"/></svg></button>
+      <div class="rail" id="rail">
+        <img loading="lazy" alt="Event photo 1" src="https://static.wixstatic.com/media/1d177c_e4c1fe48a8b547e8b5015d81dbae12c9~mv2.jpg/v1/fill/w_986,h_1316,fp_0.54_0.39,q_90/img.jpg">
+        <img loading="lazy" alt="Event photo 2" src="https://static.wixstatic.com/media/1d177c_0cb9a8a5364e413db7a056b9f0bc9135~mv2.jpg/v1/fill/w_986,h_1316,fp_0.46_0.35,q_90/img.jpg">
+        <img loading="lazy" alt="Event photo 3" src="https://static.wixstatic.com/media/1d177c_e2902801797248c197c208ae09958b7e~mv2.jpg/v1/fill/w_986,h_1316,fp_0.33_0.37,q_90/img.jpg">
+        <img loading="lazy" alt="Event photo 4" src="https://static.wixstatic.com/media/1d177c_766b204c2ad34281ac19793e915ea2e6~mv2.jpg/v1/fill/w_986,h_1316,q_90/img.jpg">
+        <img loading="lazy" alt="Event photo 5" src="https://static.wixstatic.com/media/1d177c_e9c5def3b0e940ad8efd9b70809f4c73~mv2.jpg/v1/fill/w_986,h_1316,q_90/img.jpg">
+        <img loading="lazy" alt="Event photo 6" src="https://static.wixstatic.com/media/1d177c_5bcf48923d504c4a9e8c5ae7531b9513~mv2.jpg/v1/fill/w_986,h_1316,q_90/img.jpg">
+        <img loading="lazy" alt="Event photo 7" src="https://static.wixstatic.com/media/1d177c_282282de21ba49e49f143d2db924102f~mv2.jpg/v1/fill/w_986,h_1316,fp_0.58_0.51,q_90/img.jpg">
+        <img loading="lazy" alt="Event photo 8" src="https://static.wixstatic.com/media/1d177c_b76f6304d344460a816e3253baf3a4c5~mv2.jpg/v1/fill/w_986,h_1316,q_90/img.jpg">
+        <img loading="lazy" alt="Event photo 9" src="https://static.wixstatic.com/media/1d177c_3368c89fd1204a0ba4a3487e7b206f26~mv2.jpg/v1/fill/w_986,h_1316,fp_0.44_0.28,q_90/img.jpg">
+      </div>
+      <button class="next" aria-label="Next"><svg viewBox="0 0 8 14" fill="none" stroke="currentColor" stroke-width="1"><path d="M1 1l6 6-6 6"/></svg></button>
+    </div>
+    <p class="cap" style="--w:clamp(min(92vw,520px),56.7vw,1134px)">Every event tells a story—here are some of ours.</p>
+  </section>
+
+  <section class="book" id="book">
+    <h2>Book Now</h2>
+    <!-- Point action at a form service (e.g. Formspree) to receive submissions -->
+    <form action="mailto:info@bittersweetcoffee.ca" method="post" enctype="text/plain">
+      <label>Name *<input name="name" required></label>
+      <label>Email *<input type="email" name="email" required></label>
+      <label>Phone *<input type="tel" name="phone" required></label>
+      <label>Preferred Date *<input type="date" name="date" required></label>
+      <label class="full">Event *<input name="event" required></label>
+      <label class="full">Write a message<textarea name="message"></textarea></label>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <div class="col1">
+    <h3>Location</h3><p>Ontario</p>
+    <div class="contact"><h3>Contact</h3>
+      <p><a href="mailto:info@bittersweetcoffee.ca">info@bittersweetcoffee.ca</a><br>(942) 588 - 0328</p>
+    </div>
+  </div>
+  <div class="col2">
+    <h3>BitterSweet Coffee</h3>
+    <img alt="" src="https://static.wixstatic.com/media/1d177c_f2d631c3d1a44bcbbbe55303c6908558~mv2.png/v1/fit/w_300,h_300,q_90/mascot.png">
+    <p>© 2024-2025 BitterSweet Coffee</p>
+  </div>
+  <div class="col3">
+    <h3>Social Media</h3>
+    <div class="social">
+      <a href="https://www.xiaohongshu.com/user/profile/64de383b0000000001010b53" aria-label="Rednote"><img alt="" src="https://static.wixstatic.com/media/1d177c_ca445586224c48ba86314bc149881638~mv2.png/v1/fit/w_300,h_300,q_90/rednote.png"></a>
+      <a href="https://www.instagram.com/bittersweet.toronto" aria-label="Instagram"><img alt="" src="https://static.wixstatic.com/media/1d177c_1f1e3d4ed4694561ac0ce18d8fdf7d71~mv2.png/v1/fit/w_200,h_200,q_90/instagram.png"></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Marquee: CATERING · icon · COFFEE · icon · CAKE · icon (repeated, duplicated for seamless loop)
+(function(){
+  var b="https://static.wixstatic.com/media/1d177c_";
+  var ids=["20a57a73f0464b459d45876f91b34000","f2d631c3d1a44bcbbbe55303c6908558","d0cf682f045845f3a92be992cf291023","b44e2de6f700425dbf07ec8a636429f4","86d43c9a1cee4197bf6756e0b97960fe","01b59498edf044cf9dee201e0919167e"];
+  var html="";
+  for(var r=0;r<8;r++) ids.forEach(function(id){html+='<img alt="" src="'+b+id+'~mv2.png/v1/fit/w_500,h_300,q_90/x.png">';});
+  document.getElementById("track").innerHTML=html;
+})();
+// Testimonial slider
+(function(){
+  var slides=document.querySelectorAll(".testimonial .quote"),dots=document.querySelectorAll(".dots button"),i=0;
+  function show(n){i=(n+slides.length)%slides.length;slides.forEach(function(s,k){s.classList.toggle("on",k===i)});dots.forEach(function(d,k){d.classList.toggle("on",k===i)});}
+  document.querySelector(".t-arrow.l").onclick=function(){show(i-1)};
+  document.querySelector(".t-arrow.r").onclick=function(){show(i+1)};
+  dots.forEach(function(d,k){d.onclick=function(){show(k)}});
+})();
+// Gallery arrows
+(function(){
+  var rail=document.getElementById("rail");
+  function step(d){var im=rail.querySelector("img");rail.scrollBy({left:d*(im.offsetWidth+parseFloat(getComputedStyle(rail).columnGap||0)),behavior:"smooth"});}
+  document.querySelector(".prev").onclick=function(){step(-1)};
+  document.querySelector(".next").onclick=function(){step(1)};
+})();
+</script>
+</body>
+</html>
